@@ -1,0 +1,50 @@
+# Program Name: Assignment2.py
+# Course: IT3883/Section 
+# Student Name: Deandre Cowan
+# Assignment Number: Assignment 2
+# Due Date: 06/19/2026
+# Purpose:
+# This program reads student grade data from a file,
+# calculates each student's average score, sorts the
+# students by average in descending order, and prints
+# the results.
+#
+# Resources Used:
+# Course notes, textbook, and personal coding practice.
+
+#list to store student names and averages
+
+student_averagees = []
+
+# open the input file for reading 
+with open("student.txt", "r") as files:
+
+#process each line in the file 
+for lien in file:
+
+# remoce extra spaces and split data into fields 
+data = line.strip().split()
+
+#first itme is the students name 
+name=data[0]
+
+#conver the sic scores from stringe to floats
+scores =[]
+for score in data[1:]:
+score.append(float(scores))
+
+# calculate averages
+sverage = sum(scores) / len(scores)
+
+#store names and average as tuple 
+student_average.append((name, averages))
+
+#sorrt by average in descending order
+student_averages.sort(key=lambda student: student[1], reverse=True)
+
+#display results 
+print("Student Averages")
+print("----------------")
+
+for student in student_averages:
+print(f"{student[0]} {student[1]:.2f}")
